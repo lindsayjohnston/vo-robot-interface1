@@ -52,12 +52,35 @@ main {
     margin: 0px;
     display: flex;
     /* background-color:var(--color1); */
+    position: relative;
+}
+
+/* #initiation{
+  position: absolute;
+  width: 75vw;
+  height: 10vh;
+  top: 40vh;
+  left: 12.5vw;
+  background-color: var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#initiation h1{
+  animation: blinker 2s linear infinite;
+} */
+
+@keyframes blinker {  
+  50% { opacity: 0; }
 }
 
 #left-div {
     width: 50%;
     height: 85vh;
     display: flex;
+    flex-direction: column;
     /* background-color: var(--color1); */
     justify-content: center;
     align-items: center;
@@ -84,6 +107,7 @@ main {
 video {
   opacity: 50%;
   padding: 40px 0px;
+  height: 20vh;
 }
 
 #controls{
@@ -97,8 +121,8 @@ video {
 
 #control1{
   position: relative;
-  height: 55vh;
-  width: 16.7vw;
+  height: 60vh;
+  width: 25vw;
   border: 1px var(--light-color) solid;
   display: flex;
   justify-content: center;
@@ -106,10 +130,74 @@ video {
 
 #control2{
   height: 60vh;
-  width: 16.7vw;
+  width: 25vw;
   border: 1px var(--light-color) solid;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--color2);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 #control3{
@@ -138,7 +226,7 @@ video {
 
 #slider {
   position: absolute;
-  bottom: 33vh;
+  bottom: 35vh;
   padding-left: 10vh;
 }
 

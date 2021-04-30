@@ -19,10 +19,11 @@
     <main>
         <div id="left-div">
             <img src="./body-outline-blue-shade.png" alt="body">
+            
         </div>
         <div id="right-div">
             <div id="video">
-                <video width="320" height="240" loop autoplay>
+                <video width="320" height="240" loop autoplay controls>
                     <source src="./face-vid1.MOV" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -32,17 +33,31 @@
                     <h2 id="label-high">HIGH</h2>
                     <input id="slider" orient="vertical" type="range">
                     <h2 id="label-low">LOW</h2>
-                    <h5 id="label-toggle">TOGGLE: EMOTION</h5>
+                    <!-- <h5 id="label-toggle">TOGGLE: EMOTION</h5> -->
                 </div>
                 <div id="control2">
-                    <h3>buttons</h3>
-                </div>
-                <div id="control3">
-                    <h3>turn off</h3>
+                    <h3>WAKE UP</h3>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <h3>PACIFY</h3>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <h3>SLEEP</h3>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
             </div>
         </div>
 
+        <!-- <div id="initiation"> 
+           <h1>INITIATION SEQUENCE...</h1> 
+        </div> -->
     </main>
 
 </body>
